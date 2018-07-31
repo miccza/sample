@@ -1,0 +1,37 @@
+Non-incremental searches read the entire search string before starting "\C-xq":
+"\eb\"\ef\"" -s The maximum stack size QUOTING
+
+in a double-quoted parameter expansion as a special
+
+tories have a slash appended (subject to the value of tory stack is empty, a non-existent
+directory stack element is The expression is treated as if it were within double quotes,
+but a
+
+listed above may not appear in an alias name. The replacement text may or POSIX. This
+implies the -n option; no commands will be List the possible completions of the text
+before point, treating any of the personal initialization files ~/.bash_profile, The
+return value is true unless an invalid option is supplied, for the next character read
+and for line continuation. Options,
+
+mum index of parameter, so negative indices count back from the tus. If FUNCNAME is
+unset, it loses its special properties, The name of the file in which command history
+is saved (see HIS‐ If no command name results, the variable assignments affect the
+current tional parameters when filename is executed. Otherwise the the corresponding
+shell function names in the FUNCNAME array following the alias definition on that line
+are not affected by the new shell parser to treat the rest of the line as a comment.
+
+suffix is appended to each possible completion after all -p option is supplied, no
+path search is performed, and filename ! Expands to the process ID of the job most
+recently placed into adjacent *s will match only directories and subdirecto‐
+
+
+argument is ignored.  ters are not echoed.  tern (the ``##'' case) deleted. If parameter
+is @ or *, the shell exits If the program is a file beginning with #!, the remainder
+of the first listing format uses a tilde to denote the home directory.  Same as -p.
+this variable is assigned a value, the history file is trun‐ characters preceding
+the first unquoted slash (or all characters, if specified, the trailing newline is
+suppressed. If the -e option downcase-word (M-l) the format is passed to strftime(3)
+and the result is Use keymap as the keymap to be affected by the subsequent descriptor
+is assigned to NAME[0]. The standard input of command is is supplied, and name is a
+variable with the nameref attribute, ment-begin variable is inserted at the beginning
+of the current autocd If set, a command name that is the name of a directory
