@@ -22,14 +22,18 @@ gtest.a : gtest-all.o
 gtest_main.a : gtest-all.o gtest_main.o
 	$(AR) $(ARFLAGS) $@ $^
 
+
+
+################################
+
 Number.o: Number.cpp Number.hpp
 	$(CXX) -c -o Number.o Number.cpp
 
 NumberTest.o: tests/NumberTest.cpp Number.hpp $(GTEST_HEADERS)
 	$(CXX) -c -I $(GTEST_DIR)/include -o tests/NumberTest.o tests/NumberTest.cpp
 
-runTests: tests/NumberTest.o Number.o gtest_main.a
-	$(CXX) -o runTest -lpthread tests/NumberTest.o Number.o gtest_main.a
+test: tests/NumberTest.o Number.o gtest_main.a
+	$(CXX) -o test -lpthread tests/NumberTest.o Number.o gtest_main.a && ./test
 
 main.o : main.cpp Number.hpp
 	$(CXX) -o main.o $(CXXFLAGS) -c main.cpp
