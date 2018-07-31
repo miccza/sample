@@ -13,14 +13,3 @@ Print the number of the occurence.
 1. *name* should be given in a class constructor. **Dog** and **Cat** should implement different sound (return a string).
 1. Create **Dog** and **Cat** instances to present their "voice".
 
-1. Teoria?
-   1. try/else/escept/finally - co sie kiedy wykona
-   1. Napisz klasę z kilkoma polami/metodami i zrób dziedziczenie
-
-
-
-1. SOLID Principles - coś powiedzieć, co to jest
-1. TDD Approach
-1. Przerwania (IRQ) - co to, jak to iwgl
-
-
