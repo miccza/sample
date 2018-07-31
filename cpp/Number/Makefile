@@ -29,7 +29,7 @@ NumberTest.o: tests/NumberTest.cpp Number.hpp $(GTEST_HEADERS)
 	$(CXX) -c -I $(GTEST_DIR)/include -o tests/NumberTest.o tests/NumberTest.cpp
 
 runTests: tests/NumberTest.o Number.o gtest_main.a
-	$(CXX) -o run_test -lpthread tests/NumberTest.o Number.o gtest_main.a
+	$(CXX) -o runTest -lpthread tests/NumberTest.o Number.o gtest_main.a
 
 main.o : main.cpp Number.hpp
 	$(CXX) -o main.o $(CXXFLAGS) -c main.cpp
