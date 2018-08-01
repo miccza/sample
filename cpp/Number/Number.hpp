@@ -13,6 +13,8 @@ public:
     bool isNegative() const;
     long getAbsolute() const;
 
+    bool operator<(const Number& other) const;
+
 private:
     int value;
 };

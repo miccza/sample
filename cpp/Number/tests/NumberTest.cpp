@@ -45,3 +45,14 @@ TEST(NumberTest, getAbsFromPosTest)
     auto n = Number(4);
     EXPECT_EQ(4, n.getAbsolute());
 }
+
+TEST(NumberTest, getAbsFromPosTest)
+{
+    std::vector<Number> v {0, 2, 64, 2, 3, 6, 2, 7};
+
+    std::sort(v.begin(), v.end());
+
+    ASSERT_TRUE(std::is_sorted(v.begin(), v.end(), [](const Number& l, const Number& r) {
+            return l.getNumber() < r.getNumber();
+        }));
+}
