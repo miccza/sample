@@ -33,7 +33,7 @@ NumberTest.o: tests/NumberTest.cpp Number.hpp $(GTEST_HEADERS)
 	$(CXX) -c -I $(GTEST_DIR)/include -o tests/NumberTest.o tests/NumberTest.cpp
 
 test: tests/NumberTest.o Number.o gtest_main.a
-	$(CXX) -o test -lpthread tests/NumberTest.o Number.o gtest_main.a && ./test
+	$(CXX) -o test tests/NumberTest.o Number.o gtest_main.a -lpthread && ./test
 
 main.o : main.cpp Number.hpp
 	$(CXX) -o main.o $(CXXFLAGS) -c main.cpp
