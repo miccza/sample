@@ -31,3 +31,8 @@ long Number::getAbsolute() const
     // Try to use STL here
     return 0;
 }
+
+bool Number::operator<(const Number& other) const
+{
+    return this->value < other.value;
+}
