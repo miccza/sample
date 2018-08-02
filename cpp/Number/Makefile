@@ -1,6 +1,7 @@
 GTEST_DIR = /home/mczaja/sandbox/googletest/googletest
 USER_DIR = .
 CPPFLAGS += -isystem $(GTEST_DIR)/include
+BUILDFLAGS = -g -Wall -Wextra
 CXXFLAGS += -g -Wall -Wextra -pthread -std=c++14
 
 GTEST_HEADERS = $(GTEST_DIR)/include/gtest/*.h \
@@ -27,7 +28,7 @@ gtest_main.a : gtest-all.o gtest_main.o
 ################################
 
 Number.o: Number.cpp Number.hpp
-	$(CXX) -c -o Number.o Number.cpp
+	$(CXX) -c -o Number.o $(BUILDFLAGS) Number.cpp
 
 NumberTest.o: tests/NumberTest.cpp Number.hpp $(GTEST_HEADERS)
 	$(CXX) -c -I $(GTEST_DIR)/include -o tests/NumberTest.o tests/NumberTest.cpp
@@ -35,11 +36,14 @@ NumberTest.o: tests/NumberTest.cpp Number.hpp $(GTEST_HEADERS)
 test: tests/NumberTest.o Number.o gtest_main.a
 	$(CXX) -o test tests/NumberTest.o Number.o gtest_main.a -lpthread && ./test
 
-main.o : main.cpp Number.hpp
-	$(CXX) -o main.o $(CXXFLAGS) -c main.cpp
+main.o : main.cpp Number.hpp PositiveNumber.hpp
+	$(CXX) -o main.o $(BUILDFLAGS) -c main.cpp
 
-all : main.o Number.o
+all : main.o Number.o PositiveNumber.o
 	$(CXX) -o main Number.o main.o
 
 clean :
-	rm -f *.[oa] tests/*.o
+	rm -f *.[oa] tests/*.o test main
+
+PositiveNumber.o : PositiveNumber.cpp PositiveNumber.hpp
+	$(CXX) -c -o PositiveNumber.o PositiveNumber.cpp
